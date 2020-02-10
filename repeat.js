@@ -1,15 +1,14 @@
 let repeatNumbers = function(data) {
-  let num = "";
-
-  for (let i = 0; i < data.length; i++) {
-    if (i > 0) {
-      num += ", ";
+  let repeatedString = "";
+  for (let arr of data) {
+    for (let i = 0; i < (arr[1]); i++) {
+      repeatedString = repeatedString + arr[0];
     }
-    for (let j = 0; j < data[i][1]; j++) { // if number is less than the second number iterate by 1 
-      num += data[i][0];
-    }
+    repeatedString = repeatedString + ",";
   }
-  return num;
+  repeatedString = repeatedString.slice(0, -1);
+
+  return repeatedString;
 };
 
 
